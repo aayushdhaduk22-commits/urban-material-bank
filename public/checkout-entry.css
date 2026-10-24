@@ -23,3 +23,9 @@ header.nav .account-btn{max-width:180px}
 @media(max-width:1100px){header.nav>nav{flex-wrap:wrap}header.nav .nav-links{flex:1 1 100%;width:100%}header.nav .account-area{margin:0}}
 @media(max-width:600px){header.nav{padding-top:20px;gap:10px}header.nav>.brand{gap:12px;padding-bottom:8px}header.nav .brandmark{flex-basis:52px;width:52px;height:52px;font-size:36px;border-radius:12px}header.nav .brand b{font-size:28px;letter-spacing:-.8px}header.nav .brand small{font-size:7px;letter-spacing:1.3px;margin-top:7px}header.nav .nav-links{display:flex;overflow-x:auto;gap:6px;padding:2px 0 6px;scrollbar-width:thin}header.nav .nav-links>a{flex:0 0 auto;white-space:nowrap;padding:8px 12px;min-height:34px;font-size:11px}header.nav>nav{gap:8px;padding-top:8px}header.nav .account-area{flex:1;max-width:none}header.nav .account-btn{max-width:100%}}
 header.nav .brandmark{background:#244f3b!important;color:#d5ed9e!important;border:1px solid #52775c}header.nav .brandmark svg{display:block;width:82%;height:82%;flex:none}html[data-theme="light"] header.nav .brandmark{background:#e6efd9!important;color:#173c2b!important;border-color:#8da57b}
+header.nav .brandmark{overflow:hidden;position:relative}
+header.nav .brandmark>img{width:82%!important;height:82%!important;max-width:none;object-fit:contain;margin:0;padding:0;border:0;transform:none!important;position:static!important;filter:none!important}
+header.nav .brandmark>.logo-dark{display:block!important}
+header.nav .brandmark>.logo-light{display:none!important}
+:root[data-theme="light"] header.nav .brandmark>.logo-dark{display:none!important}
+:root[data-theme="light"] header.nav .brandmark>.logo-light{display:block!important}
