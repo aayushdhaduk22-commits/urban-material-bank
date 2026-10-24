@@ -1,0 +1,1 @@
+ALTER TABLE materials ADD COLUMN IF NOT EXISTS image_key TEXT;

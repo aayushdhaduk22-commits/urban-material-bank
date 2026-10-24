@@ -1,0 +1,22 @@
+/* Delivery support contrast corrections — dark and light theme */
+.delivery-section .delivery-form{color:var(--ink)}
+.delivery-section .delivery-form-head strong,.delivery-section .delivery-assumptions summary{color:var(--ink)}
+.delivery-section .delivery-pill{background:#e5efdc;color:#234b34}
+.delivery-section .delivery-result{background:#173c2b!important;color:#f7fff5!important}
+.delivery-section .delivery-result .delivery-result-label,
+.delivery-section .delivery-result .delivery-trip,
+.delivery-section .delivery-result .delivery-invoice-row,
+.delivery-section .delivery-result .delivery-grand,
+.delivery-section .delivery-result .delivery-kpis strong{color:#f0f7ef!important}
+.delivery-section .delivery-result .delivery-result-head>span:first-child,
+.delivery-section .delivery-result .delivery-kpis small,
+.delivery-section .delivery-result .delivery-hint{color:#d0e3d0!important}
+.delivery-section .delivery-result .delivery-total,
+.delivery-section .delivery-result .delivery-grand strong{color:#d6ef8f!important}
+.delivery-section .delivery-result .delivery-demo{background:#d7ec9b!important;color:#173c2b!important}
+.delivery-section .delivery-result .delivery-copy{background:#d7ec9b!important;color:#173c2b!important}
+:root[data-theme="dark"] .delivery-section .delivery-form input:not([type=checkbox]),
+:root[data-theme="dark"] .delivery-section .delivery-form select{background:#24352a!important;color:#f3f8ef!important;border-color:#5c765f!important}
+:root[data-theme="dark"] .delivery-section .delivery-options label{background:#24352a;color:#f3f8ef}
+:root[data-theme="dark"] .delivery-section .delivery-pill{background:#243d2a;color:#e0f5c5}
+:root[data-theme="dark"] .delivery-section .delivery-form input::placeholder{color:#bdcbbd}

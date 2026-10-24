@@ -1,0 +1,1 @@
+(()=>{let theme="dark";try{theme=localStorage.getItem("umb-theme")==="light"?"light":"dark"}catch{}document.documentElement.dataset.theme=theme})();

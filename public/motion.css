@@ -1,0 +1,101 @@
+/* Motion layer for Urban Material Bank chatbot-test project.
+   Presentation-only: no markup, data, or interaction behavior is changed. */
+:root {
+  --motion-ease: cubic-bezier(.2,.75,.25,1);
+}
+@keyframes umb-rise-in {
+  from { opacity: 0; transform: translate3d(0,22px,0); }
+  to { opacity: 1; transform: translate3d(0,0,0); }
+}
+@keyframes umb-soft-float {
+  0%,100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-10px) rotate(-2deg); }
+}
+@keyframes umb-orbit-drift {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes umb-orbit-breathe {
+  0%,100% { opacity: .55; scale: .98; }
+  50% { opacity: 1; scale: 1.025; }
+}
+@keyframes umb-glint {
+  0% { transform: translateX(-150%) skewX(-18deg); }
+  55%,100% { transform: translateX(260%) skewX(-18deg); }
+}
+@keyframes umb-pulse {
+  0%,100% { box-shadow: 0 7px 20px rgba(36,79,59,.14); }
+  50% { box-shadow: 0 10px 32px rgba(36,79,59,.24); }
+}
+@keyframes umb-dot-pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(105,164,110,.3); }
+  50% { box-shadow: 0 0 0 7px rgba(105,164,110,0); }
+}
+/* Cinematic, staggered entrance without touching any app logic. */
+.hero-copy > * { animation: umb-rise-in .8s var(--motion-ease) both; }
+.hero-copy > *:nth-child(1) { animation-delay: .08s; }
+.hero-copy > *:nth-child(2) { animation-delay: .16s; }
+.hero-copy > *:nth-child(3) { animation-delay: .25s; }
+.hero-copy > *:nth-child(4) { animation-delay: .34s; }
+.hero-copy > *:nth-child(5) { animation-delay: .43s; }
+.hero-card { animation: umb-soft-float 7s ease-in-out infinite; will-change: transform; }
+.orbit { animation: umb-orbit-drift 48s linear infinite, umb-orbit-breathe 8s ease-in-out infinite; transform-origin: center; }
+.orbit::before, .orbit::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.orbit::before {
+  width: 10px; height: 10px; top: 17%; left: 16%;
+  background: var(--clay, #bd6e4b);
+  box-shadow: 0 0 0 7px rgba(189,110,75,.12), 0 0 26px rgba(189,110,75,.25);
+}
+.orbit::after {
+  width: 7px; height: 7px; right: 10%; bottom: 24%;
+  background: var(--lime, #c6df83);
+  box-shadow: 0 0 0 6px rgba(198,223,131,.18);
+}
+.float-card { animation: umb-rise-in .9s .45s var(--motion-ease) both, umb-soft-float 6s 1.4s ease-in-out infinite; }
+.hero-image { isolation: isolate; }
+.hero-image::before {
+  content: ""; position: absolute; z-index: 1; inset: -20% auto -20% -45%; width: 35%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
+  animation: umb-glint 6s 1s ease-in-out infinite;
+}
+.status-dot { animation: umb-dot-pulse 2.8s ease-out infinite; }
+.primary { animation: umb-pulse 5s ease-in-out infinite; }
+.primary:hover { animation-play-state: paused; }
+.material, .workflow-step, .stats > div, .how-impact > div, .recovery-form, .recovery-result, .matcher-card, .impact-card, .trust-panel {
+  transition: transform .45s var(--motion-ease), box-shadow .45s var(--motion-ease), border-color .35s ease;
+}
+.material:hover, .workflow-step:hover, .how-impact > div:hover, .recovery-form:hover, .recovery-result:hover {
+  transform: translateY(-5px);
+}
+.material:hover { box-shadow: 0 24px 48px rgba(23,60,43,.13); }
+.workflow-step:hover { box-shadow: 0 18px 36px rgba(23,60,43,.09); }
+.um-chat-launcher { animation: umb-rise-in .7s .8s var(--motion-ease) both; }
+.um-chat-launcher:hover { transform: translateY(-4px) scale(1.025); }
+.um-chat-panel { transform-origin: bottom right; animation: umb-rise-in .24s var(--motion-ease) both; }
+button, a, .sort, .account-menu { transition-timing-function: var(--motion-ease); }
+::selection { background: rgba(198,223,131,.45); }
+/* Scroll reveal is progressive enhancement; unsupported browsers show all content normally. */
+@supports (animation-timeline: view()) {
+  .impact-section, .map-section, .recovery-section, .market, .trust-panel, .how {
+    animation: umb-section-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 24%;
+  }
+  @keyframes umb-section-reveal {
+    from { opacity: .35; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}

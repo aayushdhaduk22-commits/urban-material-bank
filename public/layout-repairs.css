@@ -1,0 +1,25 @@
+/* v29 layout fixes: manual matching and delivery live in independent, stable containers */
+#requirementsManual{display:block;width:100%;margin:20px 0 25px;overflow:visible;min-width:0}
+#requirementsManual>summary{padding:20px 24px;font-size:15px;background:var(--card);border-radius:13px}
+#requirementsManual[open]>summary{border-bottom:1px solid var(--line);border-radius:13px 13px 0 0}
+#requirementsManual #matcher{display:block!important;width:100%;max-width:100%;padding:22px!important;box-sizing:border-box;background:var(--card)!important}
+#requirementsManual .section-head{margin-bottom:16px}
+#requirementsManual .matcher-card{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;gap:20px;width:100%;max-width:100%;box-sizing:border-box}
+#requirementsManual .matcher-form,#requirementsManual .match-results{min-width:0;width:100%;max-width:100%;box-sizing:border-box}
+#requirementsManual .requirement-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#requirementsManual label{display:block;min-width:0;max-width:100%;overflow-wrap:anywhere}
+#requirementsManual input,#requirementsManual select{box-sizing:border-box;width:100%;max-width:100%;min-width:0}
+#requirementsManual .match-results{overflow-wrap:anywhere}
+.umb-delivery-expand{margin:24px 0 8px;width:100%;clear:both}
+.umb-delivery-expand #deliverySupport{width:100%;max-width:100%;padding:22px!important;box-sizing:border-box;background:var(--card)!important}
+.umb-delivery-expand #deliverySupport .section-head{display:none}
+.umb-delivery-expand .delivery-shell{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;max-width:100%}
+.umb-delivery-expand .delivery-form,.umb-delivery-expand .delivery-result{min-width:0;width:100%;box-sizing:border-box}
+.umb-delivery-expand .delivery-result{position:static}
+#stRoutes{min-height:30px}
+#stRoutes .studio-route{flex-wrap:wrap;align-items:flex-end}
+#stRoutes .studio-route label{flex:1 1 155px;min-width:0}
+#stCosts{min-height:65px;overflow-wrap:anywhere}
+#stCosts .studio-estimate{margin-top:12px}
+@media(max-width:930px){#requirementsManual .matcher-card,.umb-delivery-expand .delivery-shell{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:650px){#requirementsManual #matcher,.umb-delivery-expand #deliverySupport{padding:14px!important}#requirementsManual .requirement-grid{grid-template-columns:minmax(0,1fr)}#requirementsManual>summary{padding:14px}#requirementsManual .matcher-card{gap:16px}}

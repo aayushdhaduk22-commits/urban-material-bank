@@ -1,0 +1,57 @@
+html[data-theme="dark"]{--ink:#edf3eb;--muted:#bdcabc;--paper:#111714;--card:#19231d;--line:#405045;--readable-accent:#c4df91;color-scheme:dark}
+html[data-theme="light"]{--ink:#172b20;--muted:#4e6255;--paper:#f5f4ef;--card:#fffefa;--line:#c8d2c5;--readable-accent:#244f3b;color-scheme:light}
+html[data-theme] body{color:var(--ink);background:var(--paper)}
+html[data-theme] header.nav .brand b,html[data-theme] .nav .nav-links>a:not(.primary){color:var(--ink)!important}
+html[data-theme] header.nav .brand small{color:var(--muted)!important}
+html[data-theme] .primary,html[data-theme] .work-actions button:first-child{background:#b8d79a!important;color:#172b20!important}
+html[data-theme] .primary *,html[data-theme] .work-actions button:first-child *{color:inherit!important}
+html[data-theme] .outline,html[data-theme] .account-btn{background:var(--card)!important;color:var(--ink)!important;border-color:var(--line)!important}
+html[data-theme] .outline span{color:inherit!important}
+html[data-theme] :is(.section-head p,.studio-muted,.work-shared,.work-shell p,.map-legend,.marketbar>span,.match-empty small,.loc,.mat-meta small,.brand small,.trade-note,.carbon-method p,.carbon-method li,.savings-lead>span,.savings-lead>small,.cart-savings #priceComparison p){color:var(--muted)!important}
+html[data-theme] :is(label,.sort,.filters .filter-title,.tetris-small,.tetris-kerf-note,.tetris-grid-title span,.tetris-quick>span,.tetris-remove){color:var(--muted)!important}
+html[data-theme] .sort.active{color:var(--readable-accent)!important}
+html[data-theme] :is(input,select,textarea){color:var(--ink)!important;background:var(--card)!important;border-color:var(--line)!important}
+html[data-theme] :is(input,textarea)::placeholder{color:var(--muted)!important;opacity:1}
+html[data-theme] .match-empty{background:var(--card)!important}
+html[data-theme] .match-empty>span{color:var(--readable-accent)!important}
+html[data-theme] .workflow-number{background:#244f3b!important;color:#e0f1c1!important}
+html[data-theme] .hero-image>span,html[data-theme] .photo-note{background:#173c2b!important;color:#fff!important;padding:5px 8px;border-radius:5px}
+html[data-theme] .hero-card{color:var(--ink)!important;background:var(--card)!important}
+html[data-theme] .hero-card :is(small,i,.hero-passport span,.hero-sample-note){color:var(--muted)!important}
+html[data-theme] .hero-passport>div{background:var(--card)!important}
+html[data-theme="dark"] .passport-pending{color:#f2ce8a!important}
+html[data-theme="light"] .passport-pending{color:#79500c!important}
+html[data-theme="light"] .hero{background:#f3f5ed!important}
+html[data-theme="light"] .hero-copy :is(h1,h1 em){color:#244f3b!important}
+html[data-theme] .hero-copy p{color:var(--muted)!important}
+html[data-theme] .tetris-section :is(p,small,.tetris-grid-title,.tetris-kerf-note){color:var(--muted)!important}
+html[data-theme] .tetris-remove{background:var(--card)!important}
+html[data-theme] .tetris-section h2 span{color:var(--readable-accent)!important}
+html[data-theme] .leaflet-control-attribution{background:#fff!important;color:#233d2c!important}
+html[data-theme] .leaflet-control-attribution a{color:#145475!important}
+html[data-theme] :is(.impact-card,.stats,.how-algorithm,footer){color:#f2f6ef!important}
+html[data-theme] :is(.impact-card,.stats,.how-algorithm,footer) :is(p,small,span){color:#d1dece!important}
+html[data-theme] .impact-card strong,html[data-theme] .stats b{color:#d5ed9e!important}
+html[data-theme] .how-algorithm .algorithm-flow strong{color:#173c2b!important}
+html[data-theme="light"] .banner{background:#fff3d4;color:#624611;border-color:#baa260}
+html[data-theme="light"] #linkStatus{color:#72500d}
+html[data-theme="light"] .layout a,html[data-theme="light"] body>header a{color:#244f3b}
+html[data-theme="light"] .layout .total{color:#244f3b}
+html[data-theme] button:disabled{opacity:1;color:var(--muted)!important;background:var(--paper)!important;border:1px solid var(--line)}
+:root[data-theme="light"]{--ink:#172b20!important;--muted:#4e6255!important;--paper:#f5f4ef!important;--card:#fffefa!important;--line:#c8d2c5!important;--readable-accent:#244f3b!important}
+:root[data-theme="dark"]{--ink:#edf3eb!important;--muted:#bdcabc!important;--paper:#111714!important;--card:#19231d!important;--line:#405045!important;--readable-accent:#c4df91!important}
+:root[data-theme="light"] header.nav .nav-links>a:not(.primary){color:#172b20!important}
+:root[data-theme="light"] header.nav :is(.outline,.account-btn){background:#fffefa!important;color:#172b20!important}
+:root[data-theme="light"] header.nav .brand small{color:#4e6255!important}
+/* Explicit foregrounds for every part of the illustrative hero listing. */
+:root[data-theme="dark"] .hero .hero-card{background:#19231d!important;color:#edf3eb!important;border-color:#405045!important}
+:root[data-theme="dark"] .hero .hero-card :is(strong,.price,.hero-passport b){color:#edf3eb!important}
+:root[data-theme="dark"] .hero .hero-card :is(.mini-row,small,.price i,.hero-passport span,.hero-sample-note){color:#c1cfbf!important}
+:root[data-theme="dark"] .hero .hero-card .hero-passport>div{background:#223027!important;border-color:#405045!important}
+:root[data-theme="dark"] .hero .hero-card .hero-passport b.passport-pending{color:#f2ce8a!important}
+:root[data-theme="dark"] .hero .hero-card .hero-sample-note{background:#19231d!important}
+:root[data-theme="light"] .hero .hero-card{background:#fffefa!important;color:#172b20!important}
+:root[data-theme="light"] .hero .hero-card :is(strong,.price,.hero-passport b){color:#172b20!important}
+:root[data-theme="light"] .hero .hero-card :is(.mini-row,small,.price i,.hero-passport span,.hero-sample-note){color:#4e6255!important}
+:root[data-theme="light"] .hero .hero-card .hero-passport>div{background:#edf2e7!important}
+:root[data-theme="light"] .hero .hero-card .hero-passport b.passport-pending{color:#79500c!important}

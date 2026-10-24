@@ -1,0 +1,25 @@
+.nav{flex-wrap:wrap;gap:16px;padding-block:16px}.nav nav{display:flex;flex:1 1 100%;width:100%;gap:12px;align-items:center}.nav-links{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;flex:1;min-width:0}.nav .nav-links>a{display:flex!important;align-items:center;justify-content:center;text-align:center;padding:12px 16px;min-height:48px;height:100%;margin:0;font:600 12px/1.4 "DM Sans",sans-serif;text-decoration:none;border-radius:8px;box-sizing:border-box}.nav .nav-links>a[href="/checkout.html"]{color:#fff}.nav .nav-links>a:focus-visible{outline:3px solid #d97945;outline-offset:3px}.studio-panel>a.primary{display:inline-flex;align-items:center;text-decoration:none;color:#fff;margin:16px 0 8px}.studio-panel #stClear{margin-right:12px}@media(max-width:1100px){.nav nav{flex-wrap:wrap}.nav-links{flex:1 1 100%}.nav .account-area{margin-left:auto}}@media(max-width:600px){.nav-links{grid-template-columns:repeat(2,minmax(0,1fr))}.nav .nav-links>a{padding:12px 16px}.nav nav{gap:8px}.nav .account-area{margin-left:0;flex:1;min-width:0}.nav .account-btn{max-width:100%}.nav #sellTop,.nav #themeToggle{padding:10px;font-size:11px}}
+/* Dedicated brand row keeps navigation clear of the wordmark. */
+header.nav{display:grid!important;grid-template-columns:minmax(0,1fr);align-items:start;justify-content:stretch;height:auto!important;min-height:0;max-height:none!important;gap:16px;padding-top:20px;padding-bottom:16px;overflow:visible}
+header.nav>.brand{position:static!important;display:flex!important;align-items:center;gap:12px;flex-shrink:0;min-width:0;width:max-content;max-width:100%;margin:0;padding:0;transform:none!important}
+header.nav .brandmark{display:grid;place-items:center;flex:0 0 48px;width:48px;height:48px;border-radius:12px;font-size:32px;line-height:1;background:#244f3b;color:#c4df79}
+header.nav .brand>div{min-width:0}
+header.nav .brand b{display:block;font:700 22px/1.25 "Space Grotesk",sans-serif;letter-spacing:-.5px;white-space:normal}
+header.nav .brand small{display:block;font:600 9px/1.6 "DM Sans",sans-serif;letter-spacing:1.6px;margin-top:4px;white-space:normal}
+header.nav>nav{position:static!important;display:flex;min-width:0;width:100%;max-width:100%;margin:0;padding:16px 0 0;border-top:1px solid var(--line);transform:none!important}
+@media(max-width:600px){header.nav{padding-top:16px;gap:12px}header.nav .brand b{font-size:20px}header.nav .brand small{font-size:8px;letter-spacing:1.1px}header.nav .brandmark{flex-basis:44px;width:44px;height:44px;font-size:29px}header.nav>nav{padding-top:12px}}
+/* Brand-led masthead, compact navigation. */
+header.nav{position:relative;gap:18px;padding-top:28px;padding-bottom:12px}
+header.nav>.brand{gap:18px;padding:4px 0 12px}
+header.nav .brandmark{width:68px;height:68px;flex-basis:68px;border-radius:18px;font-size:46px;background:var(--green);color:var(--lime);box-shadow:none}
+header.nav .brand b{font-size:clamp(28px,3.5vw,44px);line-height:1.1;letter-spacing:-1.3px}
+header.nav .brand small{font-size:10px;letter-spacing:2.4px;line-height:1.6;margin-top:10px;color:var(--muted)}
+header.nav>nav{padding-top:10px;gap:10px;flex-wrap:nowrap}
+header.nav .nav-links{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px;flex:1 1 auto}
+header.nav .nav-links>a{padding:8px 10px;min-height:36px;font-size:11px;line-height:1.25;border-radius:6px}
+header.nav #themeToggle,header.nav #sellTop,header.nav .account-btn{min-height:36px;padding:8px 10px;font-size:11px;margin:0}
+header.nav .account-area{flex:0 1 auto;margin:0;max-width:180px}
+header.nav .account-btn{max-width:180px}
+@media(max-width:1100px){header.nav>nav{flex-wrap:wrap}header.nav .nav-links{flex:1 1 100%;width:100%}header.nav .account-area{margin:0}}
+@media(max-width:600px){header.nav{padding-top:20px;gap:10px}header.nav>.brand{gap:12px;padding-bottom:8px}header.nav .brandmark{flex-basis:52px;width:52px;height:52px;font-size:36px;border-radius:12px}header.nav .brand b{font-size:28px;letter-spacing:-.8px}header.nav .brand small{font-size:7px;letter-spacing:1.3px;margin-top:7px}header.nav .nav-links{display:flex;overflow-x:auto;gap:6px;padding:2px 0 6px;scrollbar-width:thin}header.nav .nav-links>a{flex:0 0 auto;white-space:nowrap;padding:8px 12px;min-height:34px;font-size:11px}header.nav>nav{gap:8px;padding-top:8px}header.nav .account-area{flex:1;max-width:none}header.nav .account-btn{max-width:100%}}
+header.nav .brandmark{background:#244f3b!important;color:#d5ed9e!important;border:1px solid #52775c}header.nav .brandmark svg{display:block;width:82%;height:82%;flex:none}html[data-theme="light"] header.nav .brandmark{background:#e6efd9!important;color:#173c2b!important;border-color:#8da57b}

@@ -1,0 +1,29 @@
+/* UrbanMate AI chatbot — navy, slate and champagne palette */
+.um-chat-launcher{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;align-items:center;gap:10px;border:1px solid #39465a;border-radius:999px;background:#111b2c;color:#f7f8fb;padding:13px 18px;font:700 13px 'DM Sans',sans-serif;box-shadow:0 14px 38px rgba(0,0,0,.38);cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+.um-chat-launcher:hover{transform:translateY(-2px);box-shadow:0 18px 44px rgba(0,0,0,.45)}
+.um-launcher-icon{display:grid;place-items:center;width:27px;height:27px;border-radius:50%;background:#d9bd84;color:#172033;font-size:17px}
+.um-chat-panel{position:fixed;right:24px;bottom:88px;z-index:61;width:min(390px,calc(100vw - 28px));height:min(590px,calc(100dvh - 125px));display:flex;flex-direction:column;overflow:hidden;border:1px solid #344158;border-radius:20px;background:#0f1726;color:#f2f5fa;box-shadow:0 28px 90px rgba(0,0,0,.52);font-family:'DM Sans',sans-serif}
+.um-chat-panel.hidden{display:none!important}
+.um-chat-head{display:flex;align-items:center;gap:11px;padding:16px 16px;background:#172236;border-bottom:1px solid #2b374b}
+.um-chat-mark{width:40px;height:40px;display:grid;place-items:center;border-radius:13px;background:#d9bd84;color:#182236;font-size:23px}
+.um-chat-title{flex:1;min-width:0}.um-chat-title b{display:block;font:700 16px 'Space Grotesk',sans-serif;color:#f7f8fb}.um-chat-title small{display:flex;align-items:center;gap:6px;color:#a5b0c2;font-size:10px;margin-top:4px}
+.um-live-dot{width:7px;height:7px;border-radius:50%;background:#a7b4c8;display:inline-block}
+.um-chat-close{border:1px solid #39465a;background:#202c40;color:#e9edf4;width:32px;height:32px;border-radius:50%;font-size:21px;line-height:1;cursor:pointer}
+.um-chat-messages{flex:1;overflow:auto;padding:17px 14px;display:flex;flex-direction:column;gap:12px;scroll-behavior:smooth}
+.um-message{max-width:92%;padding:11px 12px;border-radius:13px;line-height:1.55;overflow-wrap:anywhere}
+.um-message-label{display:block;font-size:8px;font-weight:800;letter-spacing:1.3px;color:#a9b6c9;margin-bottom:6px}
+.um-message p{margin:0;white-space:pre-wrap;font-size:12px;color:#edf1f7}
+.um-bot{align-self:flex-start;background:#1a263a;border:1px solid #2b3a51;border-top-left-radius:4px}
+.um-user{align-self:flex-end;background:#d9bd84;border:1px solid #e6d0a4;border-top-right-radius:4px}
+.um-user .um-message-label{color:#5b4b2d}.um-user p{color:#172033}
+.um-pending p{color:#b7c2d2;font-style:italic}
+.um-suggestions{display:flex;flex-wrap:wrap;gap:7px;margin-top:1px}
+.um-suggestions button{border:1px solid #3a4960;background:#172236;color:#d9e0eb;border-radius:999px;padding:8px 10px;font:600 10px 'DM Sans',sans-serif;cursor:pointer}
+.um-suggestions button:hover{border-color:#d9bd84;color:#f4dba9}
+.um-chat-form{display:flex;align-items:center;gap:9px;padding:12px;border-top:1px solid #2b374b;background:#121c2c}
+.um-chat-form input{flex:1;min-width:0;margin:0!important;border:1px solid #35445b!important;border-radius:12px!important;background:#0d1522!important;color:#f4f6fa!important;padding:12px!important;font:500 12px 'DM Sans',sans-serif!important;color-scheme:dark}
+.um-chat-form input::placeholder{color:#8e9bb0}
+.um-chat-form button{flex:none;width:40px;height:40px;border:0;border-radius:12px;background:#d9bd84;color:#172033;font-size:22px;font-weight:800;cursor:pointer}
+.um-chat-form button:disabled{opacity:.5;cursor:wait}
+.um-chat-foot{text-align:center;padding:0 10px 11px;background:#121c2c;color:#8f9db1;font-size:9px}
+@media(max-width:520px){.um-chat-launcher{right:14px;bottom:14px;padding:11px 14px}.um-chat-panel{right:8px;bottom:72px;width:calc(100vw - 16px);height:min(610px,calc(100dvh - 88px));border-radius:17px}.um-chat-head{padding:13px}.um-chat-messages{padding:13px 11px}}
